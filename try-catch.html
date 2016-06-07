@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Try-Catch Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function testFinally(){
+            try {
+                return 2;
+            } catch (error){
+                return 1;
+            } finally {
+                return 0;
+            }
+        }
+                    
+        function testWithoutFinally(){
+            try {
+                return 2;
+            } catch (error){
+                return 1;
+            }
+        }
+        
+        alert(testFinally());          //输出0
+        alert(testWithoutFinally());      输出2
+        //只要代码中包含finally字句，那么无论try还是catch语句块中的return语句都将被忽略。
+    </script>
+</body>
+</html>
